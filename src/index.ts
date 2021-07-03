@@ -49,9 +49,6 @@ class Configuration {
 
 	get (key: string): string {
 		const config = this._getValue(this.configs, key)
-        if (config === null) {
-            return key
-        }
 
         return config
     }

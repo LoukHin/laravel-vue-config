@@ -25,9 +25,6 @@ class Configuration {
     }
     get(key) {
         const config = this._getValue(this.configs, key);
-        if (config === null) {
-            return key;
-        }
         return config;
     }
 }
