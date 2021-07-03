@@ -8,7 +8,7 @@ This package allows to easily setup configurations with a Laravel application us
 ## Installation
 
 ```console
-$ yarn add laravel-vue-config
+$ yarn add LoukHin/laravel-vue-config
 ```
 
 ### With the Laravel Mix extension
