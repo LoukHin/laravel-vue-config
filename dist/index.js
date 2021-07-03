@@ -39,9 +39,9 @@ class Configuration {
 /**
  * Imports configurations from the configured alias.
  */
-function importConfigurations(options) {
+function importConfigurations() {
     const configurations = {};
-    const files = require.context('@config', true, options.search);
+    const files = require.context('@config', true, /(fields|item)\.php$/);
     files.keys().forEach((file) => {
         var _a;
         const [_, key] = (_a = /\.\/([A-Za-z0-9-_]+).(?:php|json)/.exec(file)) !== null && _a !== void 0 ? _a : [];
@@ -53,9 +53,9 @@ function importConfigurations(options) {
  * Adds configurations to Vue.
  */
 const Config = {
-    install: (Vue, options) => {
+    install: (Vue) => {
         const configurations = new Configuration({
-            configs: importConfigurations(options),
+            configs: importConfigurations(),
         });
         // Defines a global configurations function
         const config = (key) => {

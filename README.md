@@ -4,6 +4,7 @@
 
 This package allows to easily setup configurations with a Laravel application using Vue. It is modified from and based on [`laravel-vue-lang`](https://github.com/rmariuzzo/laravel-vue-lang/).
 
+> This package is modified to fits my personal use, if your config is not the same as mine it might not work as expected
 
 ## Installation
 

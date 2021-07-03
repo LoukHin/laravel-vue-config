@@ -1,8 +1,5 @@
 import { VueConstructor } from 'vue';
 declare type ConfigFunction = (key: string) => string;
-interface ImportOptions {
-    search?: RegExp;
-}
 /**
  * Augments vue.
  */
@@ -15,6 +12,6 @@ declare module 'vue/types/vue' {
  * Adds configurations to Vue.
  */
 declare const Config: {
-    install: (Vue: VueConstructor, options: ImportOptions) => void;
+    install: (Vue: VueConstructor) => void;
 };
 export { Config as default, Config };

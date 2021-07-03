@@ -12,10 +12,6 @@ interface ConfigurationObject {
 	[key: string]: any
 }
 
-interface ImportOptions {
-	search?: RegExp
-}
-
 interface ConfigOptions {
 	configs: any
 }
@@ -70,9 +66,9 @@ class Configuration {
 /**
  * Imports configurations from the configured alias.
  */
-function importConfigurations(options: ImportOptions): ConfigurationObject {
+function importConfigurations(): ConfigurationObject {
 	const configurations: ConfigurationObject = {}
-	const files = require.context('@config', true, options.search)
+	const files = require.context('@config', true, /(fields|item)\.php$/)
 
 	files.keys().forEach((file: string) => {
 		const [_, key] = /\.\/([A-Za-z0-9-_]+).(?:php|json)/.exec(file) ?? []
@@ -102,9 +98,9 @@ declare module 'vue/types/vue' {
  * Adds configurations to Vue.
  */
 const Config = {
-	install: (Vue: VueConstructor, options: ImportOptions) => {
+	install: (Vue: VueConstructor) => {
 		const configurations = new Configuration({
-			configs: importConfigurations(options),
+			configs: importConfigurations(),
 		})
 
 		// Defines a global configurations function

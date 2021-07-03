@@ -1,6 +1,6 @@
 {
 	"name": "laravel-vue-config",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A configuration package for Vue and Laravel.",
 	"main": "dist/index.js",
 	"author": "LoukHin",
