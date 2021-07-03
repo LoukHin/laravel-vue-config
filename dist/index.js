@@ -38,7 +38,7 @@ class Configuration {
  */
 function importConfigurations() {
     const configurations = {};
-    const files = require.context('@config', true, /(fields|item)\.php$/);
+    const files = require.context('@config', true, /(fields|item|language)\.php$/);
     files.keys().forEach((file) => {
         var _a;
         const [_, key] = (_a = /\.\/([A-Za-z0-9-_]+).(?:php|json)/.exec(file)) !== null && _a !== void 0 ? _a : [];
