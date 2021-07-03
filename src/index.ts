@@ -65,7 +65,7 @@ class Configuration {
  */
 function importConfigurations(): ConfigurationObject {
 	const configurations: ConfigurationObject = {}
-	const files = require.context('@config', true, /(fields|item)\.php$/)
+	const files = require.context('@config', true, /(fields|item|language)\.php$/)
 
 	files.keys().forEach((file: string) => {
 		const [_, key] = /\.\/([A-Za-z0-9-_]+).(?:php|json)/.exec(file) ?? []
