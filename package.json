@@ -1,0 +1,42 @@
+{
+	"name": "laravel-vue-config",
+	"version": "1.0.0",
+	"description": "A configuration package for Vue and Laravel.",
+	"main": "dist/index.js",
+	"author": "LoukHin",
+	"scripts": {
+		"clean": "rm -rf dist",
+		"build": "yarn run clean && tsc",
+		"watch": "yarn run clean && tsc -w",
+		"release": "yarn build && standard-version --skip.changelog"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/loukhin/laravel-vue-config.git"
+	},
+	"keywords": [
+		"configuration",
+		"vue",
+		"laravel",
+		"webpack",
+		"loader"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/loukhin/laravel-vue-config/issues"
+	},
+	"homepage": "https://github.com/loukhin/laravel-vue-config#readme",
+	"devDependencies": {
+		"@types/node": "^14.0.13",
+		"@types/webpack-env": "^1.14.1",
+		"standard-version": "^8.0.0",
+		"typescript": "^3.7.2"
+	},
+	"dependencies": {
+		"php-array-loader": "^1.0.1",
+		"vue": "^2.6.10"
+	},
+	"peerDependencies": {
+		"laravel-mix": "^4.0.0 || ^5.0.0 || ^6.0.0"
+	}
+}
