@@ -73,7 +73,7 @@ You can now use the following in any Vue file:
 
 | Function name | Description                                                                                   | Arguments                                                   |
 | ------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `config()`        | Translates the given `key` | `key: string` |
+| `config()`        | Configurations of the given `key` | `key: string` |
 
 
 Example:
